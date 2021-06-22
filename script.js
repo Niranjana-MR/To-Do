@@ -5,8 +5,8 @@ const addBtn = document.querySelector('#addBtn');
 
 addBtn.addEventListener('click', addToDo);
 
-function addToDo(){
-    
+function addToDo() {
+
     const todoContainer = document.createElement('div');
     todoContainer.classList.add('todoContainer');
 
@@ -21,7 +21,7 @@ function addToDo(){
     const checkIcon = document.createElement('i');
     checkIcon.classList.add('fas', 'fa-check');
     checkButton.appendChild(checkIcon);
-    
+
     todoContainer.appendChild(checkButton);
 
     const deleteButton = document.createElement('button');
@@ -29,7 +29,7 @@ function addToDo(){
     const deleteIcon = document.createElement('i');
     deleteIcon.classList.add('fas', 'fa-trash');
     deleteButton.appendChild(deleteIcon);
-    
+
     todoContainer.appendChild(deleteButton);
 
     todoList.appendChild(todoContainer);

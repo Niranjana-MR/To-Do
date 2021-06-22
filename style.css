@@ -3,6 +3,8 @@
     --primiary: #00ADB5;
     --secondary: #AAD8D3;
     --accent: #EEEEEE;
+    --success: #CCFFBD;
+    --danger: #F05454;
 }
 
 * {
@@ -45,20 +47,64 @@ body {
     background-color: var(--secondary);
 }
 
+input:focus{
+    outline: none;
+}
+
 #addBtn {
     margin-left: .5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.4rem;
     background-color: var(--primiary);
     color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 #addBtn:hover {
     transform: scale(1.02);
-    cursor: pointer;
-    margin-left: .5rem;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--secondary);
+    background-color: var(--success);
     color: var(--primiary);
+}
+
+#todoList{
+    margin-top: 3rem;
+}
+
+.todoContainer {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr;
+    grid-column-gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    background-color: var(--accent);
+}
+
+.checkButton, .deleteButton{
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    color: var(--text);
+}
+.checkButton{
+    background-color: var(--primiary);
+}
+.deleteButton{
+    background-color: var(--secondary);
+}
+
+.checkButton:hover{
+    background-color: var(--success);
+    color: var(--primiary);
+    transform: scale(1.025);
+}
+
+.deleteButton:hover{
+    background-color: var(--danger);
+    color: var(--accent);
+    transform: scale(1.025);
 }
