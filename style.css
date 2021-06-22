@@ -80,6 +80,7 @@ input:focus{
     font-size: 1.8rem;
     padding: 0.5rem;
     background-color: var(--accent);
+    transition: all 250ms ease;
 }
 
 .checkButton, .deleteButton{
@@ -107,4 +108,20 @@ input:focus{
     background-color: var(--danger);
     color: var(--accent);
     transform: scale(1.025);
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.checked{
+    text-decoration: line-through;
+    border-radius: 0.5rem;
+    background-color: var(--success);
+    opacity: 0.5;
+}
+
+.swipe{
+    transform: translateX(8rem);
+    opacity: 0;
 }

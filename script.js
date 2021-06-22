@@ -4,6 +4,7 @@ const userInput = document.querySelector('#userInput');
 const addBtn = document.querySelector('#addBtn');
 
 addBtn.addEventListener('click', addToDo);
+todoList.addEventListener('click', (e)=>action(e));
 
 function addToDo() {
 
@@ -12,7 +13,8 @@ function addToDo() {
 
     const todoItem = document.createElement('li');
     todoItem.classList.add('todoItem');
-    todoItem.textContent = 'This works';
+    //check for empty values
+    todoItem.textContent = userInput.value;
 
     todoContainer.appendChild(todoItem);
 
@@ -33,4 +35,19 @@ function addToDo() {
     todoContainer.appendChild(deleteButton);
 
     todoList.appendChild(todoContainer);
+
+    //clear user input
+    userInput.value = '';
+}
+
+function action(e){
+    const item = e.target;
+    if(item.classList[0] === 'deleteButton'){
+        item.parentElement.classList.add('swipe');
+        item.parentElement.addEventListener('transitionend', ()=>item.parentElement.remove());
+    }
+
+    if(item.classList[0] === 'checkButton'){
+        item.parentElement.classList.toggle('checked');
+    }
 }
