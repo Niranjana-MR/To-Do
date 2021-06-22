@@ -19,21 +19,28 @@
 
 <body>
     <div id="mainContainer">
-    <div id="header">
-        <header>
-            <h2>Todo List</h2>
-        </header>
+        <div id="header">
+            <header>
+                <h2>Todo List</h2>
+            </header>
+        </div>
+        <div id="filter">
+            <select name="todoFilter" id="todoFilter">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+        <div id="inputContainer">
+            <input type="text" name="userInput" id="userInput">
+            <button id="addBtn"><i class="fas fa-plus square"></i></button>
+
+        </div>
+
+        <div>
+            <ul id="todoList"></ul>
+        </div>
     </div>
-    <div id="inputContainer">
-        <input type="text" name="userInput" id="userInput">
-        <button id="addBtn"><i class="fas fa-plus square"></i></button>
-    </div>
-    <div>
-        <ul id="todoList">
-            <!--list dynamically generated-->
-        </ul>
-    </div>
-</div>
     <script src="./script.js"></script>
 </body>
 

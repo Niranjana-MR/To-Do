@@ -47,7 +47,7 @@ body {
     background-color: var(--secondary);
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
@@ -67,7 +67,7 @@ input:focus{
     color: var(--primiary);
 }
 
-#todoList{
+#todoList {
     margin-top: 3rem;
 }
 
@@ -83,7 +83,8 @@ input:focus{
     transition: all 250ms ease;
 }
 
-.checkButton, .deleteButton{
+.checkButton,
+.deleteButton {
     padding: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
@@ -91,37 +92,62 @@ input:focus{
     border-radius: 0.4rem;
     color: var(--text);
 }
-.checkButton{
+
+.checkButton {
     background-color: var(--primiary);
 }
-.deleteButton{
+
+.deleteButton {
     background-color: var(--secondary);
 }
 
-.checkButton:hover{
+.checkButton:hover {
     background-color: var(--success);
     color: var(--primiary);
     transform: scale(1.025);
 }
 
-.deleteButton:hover{
+.deleteButton:hover {
     background-color: var(--danger);
     color: var(--accent);
     transform: scale(1.025);
 }
 
-.fa-trash, .fa-check{
+.fa-trash,
+.fa-check {
     pointer-events: none;
 }
 
-.checked{
+.checked {
     text-decoration: line-through;
     border-radius: 0.5rem;
     background-color: var(--success);
     opacity: 0.5;
 }
 
-.swipe{
+.swipe {
     transform: translateX(8rem);
     opacity: 0;
+}
+
+#filter {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#todoFilter {
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 3rem;
+    padding: 0rem 1.5rem;
+}
+
+select {
+    color: var(--primiary);
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
 }
