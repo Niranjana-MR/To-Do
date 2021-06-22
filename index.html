@@ -18,15 +18,22 @@
 </head>
 
 <body>
-    <div>
+    <div id="mainContainer">
+    <div id="header">
         <header>
             <h2>Todo List</h2>
         </header>
     </div>
-    <div>
+    <div id="inputContainer">
         <input type="text" name="userInput" id="userInput">
-        <button><i class="fas fa-plus square"></i></button>
+        <button id="addBtn"><i class="fas fa-plus square"></i></button>
     </div>
+    <div>
+        <ul id="ToDoList">
+            <!--list dynamically generated-->
+        </ul>
+    </div>
+</div>
     <script src="./script.js"></script>
 </body>
 
